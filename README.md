@@ -1,7 +1,7 @@
 # datastackmodern
 
 Tarefas: 
-Tarefas:
+
 
 Infraestrutura:
 
