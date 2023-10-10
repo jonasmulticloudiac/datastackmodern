@@ -9,7 +9,7 @@ Infraestrutura:
 
     Setar as Permissoes do Gitpod ao Repositorio no Github X
 
-    Subir o Airbyte via docker X
+    Subir o Airbyte via docker XXX
 
     Subir o Airflow via docker X
 
