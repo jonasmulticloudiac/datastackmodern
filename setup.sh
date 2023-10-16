@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 up() {
-  echo "Starting Airbyte..."
-  cd airbyte
-  docker-compose down -v
-  docker-compose up -d
-  cd ..
+  # echo "Starting Airbyte..."
+  # cd airbyte
+  # docker-compose down -v
+  # docker-compose up -d
+  # cd ..
 
   echo "Starting Airflow..."
   cd airflow
@@ -31,16 +31,16 @@ config() {
 
   echo "Connecting Airflow with Airbyte..."
   echo "Enter your Airbyte Epidemiology connection ID: "
-  read epidemiology_connection_id
+  export epidemiology_connection_id="e1b7cc7a-c34e-4c3c-becf-041febc9b590"
 
   echo "Enter your Airbyte Economy connection ID: "
-  read economy_connection_id
-
+  export economy_connection_id="77c9c17f-7a7e-42e7-abe8-00af8442c533"
+ 
   echo "Enter your Airbyte Demographics connection ID: "
-  read demographics_connection_id
-
+  export demographics_connection_id="9c7c40a6-72ec-4d57-a7a4-382560210df6"
+ 
   echo "Enter your Airbyte Index connection ID: "
-  read index_connection_id
+  export  index_connection_id="57612cc3-59b8-4747-822f-18891e7994e4"
 
   # Set connection IDs for DAG.
   cd airflow
