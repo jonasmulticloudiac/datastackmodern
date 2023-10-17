@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 up() {
-  # echo "Starting Airbyte..."
-  # cd airbyte
-  # docker-compose down -v
-  # docker-compose up -d
-  # cd ..
+  echo "Starting Airbyte..."
+  cd airbyte
+  docker-compose stop -v
+  docker-compose up -d
+  cd ..
 
   echo "Starting Airflow..."
   cd airflow
-  docker-compose down -v    
+  docker-compose stop -v    
   docker-compose up airflow-init
   docker-compose up -d
   cd ..
 
   echo "Starting Metabase..."
   cd metabase
-  docker-compose down -v
+  docker-compose stop -v
   docker-compose up -d
   cd ..
  
@@ -67,15 +67,15 @@ config() {
 down() {
   echo "Stopping Airbyte..."
   cd airbyte
-  docker-compose down
+  docker-compose stop
   cd ..
   echo "Stopping Airflow..."
   cd airflow
-  docker-compose down
+  docker-compose stop
   cd ..
   echo "Stopping Metabase..."
   cd metabase
-  docker-compose down
+  docker-compose stop
   cd ..
 }
 
