@@ -70,6 +70,13 @@ x-airflow-common:
     AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 20
 
 
+#configuração do email
+    AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+    AIRFLOW__SMTP__SMTP_USER: jonasmulticloudiac@gmail.com
+    AIRFLOW__SMTP__SMTP_PASSWORD: 'kzix gitb pcnk kjkn'
+    AIRFLOW__SMTP__SMTP_PORT: 587
+    AIRFLOW__SMTP__MAIL_FROM: Airflow
+
 
     
 
