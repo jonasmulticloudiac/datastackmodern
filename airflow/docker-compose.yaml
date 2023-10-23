@@ -76,8 +76,6 @@ x-airflow-common:
     AIRFLOW__SMTP__SMTP_PASSWORD: 'kzix gitb pcnk kjkn'
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__MAIL_FROM: Airflow
-
-
     
 
   volumes:
@@ -85,7 +83,7 @@ x-airflow-common:
     - ./data:/opt/airflow/data
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    
+
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
