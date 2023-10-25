@@ -10,8 +10,8 @@ dag =  DAG('bigdata', description="Nossa Dag",
 big_data = BigDataOperator(
         task_id="big_data",
         path_to_csv_file = '/opt/airflow/data/Churn.csv',
-        path_to_save_file = '/opt/airflow/data/Churn.json',
-        file_type = 'json',
+        path_to_save_file = '/opt/airflow/data/Churn.parquet',
+        file_type = 'parquet',
         dag=dag
         )
 
